@@ -2,6 +2,7 @@ body{
     background-color: rgb(37, 41, 38);
     color: #af8c53;
     font-family: "Forum Regular";
+    border: 2px solid;
 }
 
 #container{
@@ -57,15 +58,19 @@ nav ul li a{
     padding: 5%;
 }
 
-.sec-img{
+.sec-img-div{
     width: 100%;
     height: 100%;
-    float: left;
-    display: block;
-    object-fit: cover;
-    object-position: 50% 50%;
-    /* border: 4px solid chartreuse; */
+    border: 4px solid chartreuse;
 }
+/*  */
+.sec-img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    /* border: 4px solid maroon; */
+}
+
 
 /* #section1{
     border: 4px solid red;
@@ -119,12 +124,11 @@ nav ul li a{
     font-size: 43px;
 }
 
-
 #section4{
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    grid-template-areas: "cont_col1 cont_col2";
+    grid-template-columns: repeat(auto-fit,minmax(333px,1fr));
 }
+
 #sec4-contaner p{
     font-size: 44px;
     display: inline-block;
@@ -133,20 +137,23 @@ nav ul li a{
 }
 
 #cont_col1{
-    grid-area: cont_col1;
     display: flex;
     flex-direction: column;
-    /* border: 2px solid red; */
-    align-items: center;
+    border: 2px solid red;
+    align-items: center; 
+    width: 100%;
+    text-align: center;
+    /* background-color: blueviolet;  */
 }
 
 #cont_col2{
-    grid-area: cont_col2;
-    /* border: 2px solid hotpink; */
-    align-items: center;
+    width: 100%;
+    border: 2px solid hotpink;
+    /* background-color: maroon; */
+
 }
 
-#cont_col1 p{
+#cont_col1_heading{
     font-size: 100px;
     margin: 39px 13px 12px;
 }
@@ -160,7 +167,7 @@ nav ul li a{
 #buisness-hrs{
     background-color: #af8c53;
     height: 45%;
-    width: 340px;
+    width: 62%;
     color: black;
     font-size: 27px;
     display: inherit;
@@ -174,7 +181,7 @@ nav ul li a{
     border-radius: 20px;
     border: 1px solid;
     display: inline-block;
-    width: 423px;
+    width: 70%;
     height: fit-content;
     margin-left: 15px;
     font-size: 30px;
@@ -185,7 +192,7 @@ nav ul li a{
 }
 
 #sec4-btn p{
-    font-size: 30px;
+    font-size: 1em;
     margin: 0px 7px;
 }
 
@@ -195,5 +202,29 @@ nav ul li a{
     position: relative;
     top: 2px
 }
+
+@media only screen and (max-width:600px){
+    #cont_col1_heading{
+        font-size: 15vw;
+    }
+    #cont_col2_heading{
+        font-size: 15vw;
+    }
+
+    #sec4-btn{
+        font-size: 4vw;
+    }
+    #buisness-hrs{
+        font-size: 4vw;
+    }
+}
+@media only screen and (max-width:730px){
+    nav{
+        display:none;
+    }
+
+}
+
+
 
 
