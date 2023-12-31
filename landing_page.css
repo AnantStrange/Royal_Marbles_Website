@@ -218,12 +218,6 @@ nav ul li a{
         font-size: 4vw;
     }
 }
-@media only screen and (max-width:730px){
-    nav{
-        display:none;
-    }
-
-}
 
 
 @media only screen and (max-width:570px){
